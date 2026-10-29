@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>clickERP · Learn SAP BTP CAP</title>
+<meta name="description" content="Free SAP BTP CAP videos, step-by-step guides and live demo classes for beginners and SAP professionals.">
+<meta property="og:title" content="clickERP · Learn SAP BTP CAP">
+<meta property="og:description" content="Free SAP CAP videos, guides and live demos. No coding background needed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FCFDFE;--navy:#12325B;--teal:#0D9488;--amber:#92400E;--amber-bg:#FEF3C7;--code:#0F1E36;--mint:#5EEAD4;--line:#E3E8F0;--muted:#4A5B75}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--navy);font-family:Lato,system-ui,sans-serif;line-height:1.55;font-size:17px}
+a{color:var(--teal)}
+.wrap{max-width:720px;margin:0 auto;padding:0 18px}
+header{position:sticky;top:0;z-index:5;background:rgba(252,253,254,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:900;font-size:20px;color:var(--navy);text-decoration:none}
+.logo span{display:grid;place-items:center;width:32px;height:32px;border-radius:8px;background:var(--navy);color:var(--mint);font-size:15px}
+nav a{font-weight:700;font-size:14px;margin-left:14px;text-decoration:none;color:var(--navy)}
+@media(max-width:480px){nav a.hide-sm{display:none}}
+.hero{background:var(--navy);color:#fff;padding:44px 0 40px}
+.eyebrow{font-size:13px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--mint)}
+h1{font-size:34px;line-height:1.15;font-weight:900;margin:10px 0 14px}
+h1 em{font-style:normal;color:var(--mint)}
+.hero p{color:#D6E0EE;max-width:560px}
+.btns{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+@media(min-width:560px){.btns{flex-direction:row}}
+.btn{display:block;text-align:center;padding:15px 22px;border-radius:12px;font-weight:900;text-decoration:none;font-size:16px}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-light{background:#fff;color:var(--navy)}
+.btn-outline{border:2px solid var(--teal);color:var(--teal);background:#fff}
+section{padding:40px 0;border-bottom:1px solid var(--line)}
+h2{font-size:26px;font-weight:900;line-height:1.2;margin:6px 0 10px}
+.sec-eyebrow{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.lead{color:var(--muted);margin-bottom:20px}
+.demo{background:var(--amber-bg);border:1px solid #F5D98B;border-radius:16px;padding:22px}
+.demo .badge{display:inline-block;background:var(--amber);color:#fff;font-weight:900;font-size:12px;letter-spacing:.08em;padding:4px 10px;border-radius:999px}
+.dates{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.date{background:#fff;border-radius:12px;padding:12px;text-align:center;border:1px solid #F5D98B}
+.date b{display:block;font-size:24px;font-weight:900}
+.date small{color:var(--amber);font-weight:700}
+.demo ul{margin:6px 0 18px 20px;color:var(--navy)}
+.list{display:flex;flex-direction:column;gap:10px}
+.card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:var(--navy)}
+.num{flex:none;display:grid;place-items:center;width:42px;height:42px;border-radius:10px;background:var(--navy);color:var(--mint);font-weight:900;font-size:15px}
+.card h3{font-size:17px;font-weight:900;line-height:1.3}
+.card p{font-size:15px;color:var(--muted)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;margin-top:4px}
+.tag-live{background:#CCFBF1;color:#0F766E}
+.tag-soon{background:#EEF2F7;color:var(--muted)}
+.course{background:var(--code);color:#fff;border-radius:16px;padding:22px}
+.course code{font-family:"JetBrains Mono",monospace;color:var(--mint);font-size:14px}
+.course ul{margin:12px 0 0 20px;color:#D6E0EE;font-size:15px}
+.cta{background:var(--navy);color:#fff;text-align:center;padding:44px 0;border:0}
+.cta h2{color:#fff}
+.cta p{color:#D6E0EE;margin-bottom:20px}
+footer{padding:24px 0 32px;font-size:14px;color:var(--muted);text-align:center}
+.social{display:flex;justify-content:center;gap:18px;margin-bottom:10px;font-weight:700}
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <a class="logo" href="#top"><span>cE</span>clickERP</a>
+  <nav><a href="#demo">Free demo</a><a class="hide-sm" href="#start">Start here</a><a href="#guides">Guides</a><a href="#interview">Interview</a></nav>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+  <div class="eyebrow">SAP BTP · SAP CAP · for beginners</div>
+  <h1>Build real SAP apps.<br><em>No coding background needed.</em></h1>
+  <p>A new concept every day, free step-by-step guides, interview prep and live classes. We explain every new word in one simple sentence before we use it.</p>
+  <div class="btns">
+    <a class="btn btn-teal" href="#demo">Join the free live demo</a>
+    <a class="btn btn-light" href="https://forms.gle/ovT9EgQquL5ERW2c6" target="_blank" rel="noopener">Request live training</a>
+  </div>
+</div></div>
+
+<main class="wrap">
+
+<section id="demo">
+  <div class="demo">
+    <span class="badge">FREE · LIVE · ONLINE</span>
+    <h2>Build your first SAP CAP app with us</h2>
+    <p>We start from an empty folder and finish with a working app: customers, orders and order items, with a live API you can open in your browser.</p>
+    <div class="dates">
+      <div class="date"><small>Saturday</small><b>Nov 14</b><small>about 1 hour</small></div>
+      <div class="date"><small>Sunday</small><b>Nov 15</b><small>about 1 hour</small></div>
+    </div>
+    <p><b>Same class on both days. Pick one.</b> It's for you if you are:</p>
+    <ul>
+      <li>In a support project and want to build, not just fix</li>
+      <li>Working on technology that is being retired</li>
+      <li>A functional consultant curious about BTP</li>
+      <li>A fresher or from a non-IT background</li>
+    </ul>
+    <a class="btn btn-teal" href="https://forms.gle/ovT9EgQquL5ERW2c6" target="_blank" rel="noopener">Register for Nov 14 or 15</a>
+  </div>
+</section>
+
+<section id="start">
+  <div class="sec-eyebrow">New to SAP?</div>
+  <h2>Start here</h2>
+  <p class="lead">Four steps, in order. Each one takes less than an hour.</p>
+  <div class="list">
+    <a class="card" href="#concept"><div class="num">1</div><div><h3>Learn one word a day</h3><p>Read today's concept. One simple sentence, no jargon.</p></div></a>
+    <a class="card" href="guides/00-btp-trial-setup.html"><div class="num">2</div><div><h3>Get your free tools</h3><p>Set up your free SAP BTP trial and Business Application Studio.</p><span class="tag tag-live">Setup guide</span></div></a>
+    <a class="card" href="guides/01-first-sales-order.html"><div class="num">3</div><div><h3>Build your first app</h3><p>Follow guide 1 and build a real Sales Orders app from zero.</p><span class="tag tag-live">Guide 1</span></div></a>
+    <a class="card" href="#demo"><div class="num">4</div><div><h3>Build it live with us</h3><p>Join the free live demo and ask your questions.</p></div></a>
+  </div>
+</section>
+
+<section id="concept">
+  <div class="sec-eyebrow">Concept of the day</div>
+  <h2 id="c-term">SAP CAP</h2>
+  <p class="lead">One new word every day, explained in one simple sentence.</p>
+  <div class="course">
+    <code id="c-date">Today</code>
+    <p id="c-def" style="margin-top:10px;font-size:17px">CAP is SAP's toolkit for building business apps on SAP BTP, with much less code.</p>
+    <p id="c-eg" style="margin-top:10px;color:#D6E0EE;font-size:15px"></p>
+  </div>
+  <div class="btns"><button class="btn btn-outline" id="c-next" type="button" style="cursor:pointer;font-family:inherit">Show me another one</button></div>
+</section>
+
+<section id="guides">
+  <div class="sec-eyebrow">Free, step by step</div>
+  <h2>Hands-on guides</h2>
+  <p class="lead">Each guide matches one video, step for step. You only need a free SAP BTP trial account.</p>
+  <div class="list">
+    <div class="card"><div class="num">0</div><div><h3><a href="guides/00-btp-trial-setup.html">Set Up Your Free SAP BTP Trial</a></h3><p>Create your trial account and open Business Application Studio. Do this first.</p><a class="tag tag-live" href="guides/00-btp-trial-setup.html">Read the guide</a></div></div>
+    <div class="card"><div class="num">1</div><div><h3><a href="guides/01-first-sales-order.html">Build Your First SAP CAP App from Zero</a></h3><p>Customers and orders, an OData API, sample data and a Fiori app.</p><a class="tag tag-live" href="guides/01-first-sales-order.html">Read the guide</a> <a class="tag tag-soon" href="slides/demo1-slides.pdf">Slides (PDF)</a></div></div>
+    <div class="card"><div class="num">2</div><div><h3>Customer Notes (S/4HANA)</h3><span class="tag tag-soon">Coming Nov 1</span></div></div>
+    <div class="card"><div class="num">3</div><div><h3>Book Lending</h3><span class="tag tag-soon">Coming Nov 4</span></div></div>
+    <div class="card"><div class="num">4</div><div><h3>Webinar Registration</h3><span class="tag tag-soon">Coming Nov 6</span></div></div>
+    <div class="card"><div class="num">5</div><div><h3>IT Helpdesk (Fiori)</h3><span class="tag tag-soon">Coming Nov 8</span></div></div>
+    <div class="card"><div class="num">6</div><div><h3>Expense Claims (authorization)</h3><span class="tag tag-soon">Coming Nov 11</span></div></div>
+  </div>
+</section>
+
+<section id="interview">
+  <div class="sec-eyebrow">Get job-ready</div>
+  <h2>Interview guides</h2>
+  <p class="lead">Real interview questions with a short spoken answer, plus deeper detail if the interviewer digs in.</p>
+  <div class="list">
+    <a class="card" href="interview/btp-cockpit-instances-bindings-service-keys.html"><div class="num">Q1</div><div><h3>What you see in the BTP cockpit after deploying a CAP app</h3><p>Apps, service instances, bindings and service keys, explained with an office building.</p><span class="tag tag-live">Read the guide</span></div></a>
+    <a class="card" href="interview/fiori-actions-dialogs-tree-tables.html"><div class="num">Q2</div><div><h3>Fiori Elements: actions, dialogs and tree tables</h3><p>How actions open dialogs, custom buttons, and tree tables in CAP.</p><span class="tag tag-live">Read the guide</span></div></a>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Want live, instructor-led SAP training?</h2>
+  <p>Weekend batches with real projects. Tell us what you need.</p>
+  <a class="btn btn-teal" style="display:inline-block" href="https://forms.gle/ovT9EgQquL5ERW2c6" target="_blank" rel="noopener">Request live training</a>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <div class="social">
+    <a href="https://www.youtube.com/@clickERP" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.linkedin.com/company/clickerp26/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://www.instagram.com/clickerp_/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+  © 2026 clickERP
+</footer>
+
+<script src="concepts.js"></script>
+</body>
+</html>

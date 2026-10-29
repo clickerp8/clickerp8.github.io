@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | default: site.title }} · clickERP</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FCFDFE;--navy:#12325B;--teal:#0D9488;--amber:#92400E;--amber-bg:#FEF3C7;--code:#0F1E36;--mint:#5EEAD4;--line:#E3E8F0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--navy);font-family:Lato,system-ui,sans-serif;line-height:1.65;font-size:17px}
+a{color:var(--teal)}
+header{position:sticky;top:0;background:rgba(252,253,254,.95);border-bottom:1px solid var(--line);z-index:5}
+.bar{max-width:760px;margin:0 auto;padding:0 18px;height:58px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:8px;font-weight:900;font-size:20px;color:var(--navy);text-decoration:none}
+.logo span{display:grid;place-items:center;width:32px;height:32px;border-radius:8px;background:var(--navy);color:var(--mint);font-size:15px}
+.bar a.home{font-weight:700;font-size:14px;text-decoration:none;color:var(--navy)}
+main{max-width:760px;margin:0 auto;padding:24px 18px 48px}
+h1{font-size:30px;line-height:1.2;font-weight:900}
+h2{font-size:22px;font-weight:900;margin-top:36px;padding-top:14px;border-top:1px solid var(--line)}
+h3{font-size:18px;font-weight:900}
+code{font-family:"JetBrains Mono",monospace;font-size:.88em;background:#EEF2F7;padding:1px 5px;border-radius:4px}
+pre{background:var(--code);color:#E6EDF6;padding:16px;border-radius:12px;overflow-x:auto}
+pre code{background:none;padding:0;color:inherit}
+blockquote{margin:16px 0;padding:12px 16px;background:var(--amber-bg);border-left:4px solid var(--amber);border-radius:8px}
+blockquote p{margin:4px 0}
+img{max-width:100%;border-radius:10px;border:1px solid var(--line)}
+table{border-collapse:collapse;display:block;overflow-x:auto;font-size:15px}
+th,td{border:1px solid var(--line);padding:6px 10px;text-align:left}
+th{background:#EEF2F7}
+.cta{margin-top:40px;background:var(--navy);color:#fff;border-radius:16px;padding:22px;text-align:center}
+.cta a{display:inline-block;margin-top:10px;background:var(--teal);color:#fff;font-weight:900;padding:13px 20px;border-radius:12px;text-decoration:none}
+footer{text-align:center;font-size:14px;color:#4A5B75;padding:0 18px 32px}
+</style>
+</head>
+<body>
+<header><div class="bar"><a class="logo" href="{{ '/' | relative_url }}"><span>cE</span>clickERP</a><a class="home" href="{{ '/' | relative_url }}">← All guides</a></div></header>
+<main>
+{{ content }}
+<div class="cta"><b>Want live, instructor-led SAP training?</b><br><a href="https://forms.gle/ovT9EgQquL5ERW2c6" target="_blank" rel="noopener">Request live training</a></div>
+</main>
+<footer><a href="https://www.youtube.com/@clickERP">YouTube</a> · <a href="https://www.linkedin.com/company/clickerp26/">LinkedIn</a> · <a href="https://www.instagram.com/clickerp_/">Instagram</a><br>© 2026 clickERP</footer>
+</body>
+</html>
