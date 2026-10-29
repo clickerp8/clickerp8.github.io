@@ -61,6 +61,14 @@ h2{font-size:26px;font-weight:900;line-height:1.2;margin:6px 0 10px}
 .card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:var(--navy)}
 .num{flex:none;display:grid;place-items:center;width:42px;height:42px;border-radius:10px;background:var(--navy);color:var(--mint);font-weight:900;font-size:15px}
 #who .num{background:#CCFBF1;font-size:20px}
+.carousel{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.carousel::-webkit-scrollbar{display:none}
+.carousel .card{flex:0 0 100%;scroll-snap-align:start;min-height:96px;align-items:center}
+.car-nav{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:14px}
+.car-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--navy);font-size:22px;line-height:1;cursor:pointer}
+.dots{display:flex;gap:8px}
+.dots button{width:8px;height:8px;border-radius:999px;border:0;padding:0;background:#C9D3E1;cursor:pointer;transition:width .2s}
+.dots button.on{width:22px;background:var(--teal)}
 .card h3{font-size:17px;font-weight:900;line-height:1.3}
 .card p{font-size:15px;color:var(--muted)}
 .tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;margin-top:4px}
@@ -101,14 +109,15 @@ footer{padding:24px 0 32px;font-size:14px;color:var(--muted);text-align:center}
   <div class="sec-eyebrow">Is this for you?</div>
   <h2>Who should learn SAP BTP CAP?</h2>
   <p class="lead">Different stories, same answer. If one of these sounds like you, you're in the right place.</p>
-  <div class="list">
-    <div class="card"><div class="num">🎫</div><div><h3>"I close support tickets every day."</h3><p>Move from fixing other people's code to building your own apps.</p></div></div>
+  <div class="carousel" id="who-track">
+    <div class="card"><div class="num">🛠️</div><div><h3>"I close support tickets every day."</h3><p>Move from fixing other people's code to building your own apps.</p></div></div>
     <div class="card"><div class="num">⏳</div><div><h3>"My technology is being retired."</h3><p>SAP's clean core move means new apps are built on BTP. CAP is how they're built.</p></div></div>
     <div class="card"><div class="num">📊</div><div><h3>"I'm a functional consultant, not a developer."</h3><p>CAP starts with describing business data, which you already understand.</p></div></div>
     <div class="card"><div class="num">🌱</div><div><h3>"I'm a fresher, or not from IT."</h3><p>We explain every new word in one simple sentence. No coding background needed.</p></div></div>
     <div class="card"><div class="num">💼</div><div><h3>"Years in IT, and still no real project."</h3><p>Build real apps you can show in interviews and on your profile.</p></div></div>
     <div class="card"><div class="num">☁️</div><div><h3>"I know SAP. I want to move to the cloud."</h3><p>ABAP and SAP professionals: learn how side-by-side apps are built on BTP.</p></div></div>
   </div>
+  <div class="car-nav"><button type="button" class="car-btn" id="who-prev" aria-label="Previous">‹</button><div class="dots" id="who-dots"></div><button type="button" class="car-btn" id="who-next" aria-label="Next">›</button></div>
 </section>
 
 <section id="demo">
@@ -195,5 +204,41 @@ footer{padding:24px 0 32px;font-size:14px;color:var(--muted);text-align:center}
 </footer>
 
 <script src="concepts.js"></script>
+<script>
+(function () {
+  var track = document.getElementById("who-track");
+  if (!track) return;
+  var cards = track.children, dots = document.getElementById("who-dots"), cur = 0, timer;
+  for (var k = 0; k < cards.length; k++) {
+    var d = document.createElement("button");
+    d.type = "button";
+    d.setAttribute("aria-label", "Show card " + (k + 1));
+    d.addEventListener("click", (function (n) { return function () { go(n); restart(); }; })(k));
+    dots.appendChild(d);
+  }
+  function mark() {
+    for (var k = 0; k < dots.children.length; k++) dots.children[k].className = k === cur ? "on" : "";
+  }
+  function go(n) {
+    cur = (n + cards.length) % cards.length;
+    track.scrollTo({ left: cards[cur].offsetLeft - track.offsetLeft, behavior: "smooth" });
+    mark();
+  }
+  function restart() {
+    clearInterval(timer);
+    timer = setInterval(function () { go(cur + 1); }, 4000);
+  }
+  track.addEventListener("scroll", function () {
+    var n = Math.round(track.scrollLeft / track.clientWidth);
+    if (n !== cur) { cur = n; mark(); }
+  });
+  track.addEventListener("touchstart", restart, { passive: true });
+  document.getElementById("who-prev").addEventListener("click", function () { go(cur - 1); restart(); });
+  document.getElementById("who-next").addEventListener("click", function () { go(cur + 1); restart(); });
+  mark();
+  restart();
+})();
+</script>
+
 </body>
 </html>
