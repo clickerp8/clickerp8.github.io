@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KMTZWDLFND"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KMTZWDLFND');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAP BTP CAP Roadmap · clickERP</title>
+<meta name="description" content="Your 4 to 6 week roadmap to become job-ready in SAP BTP CAP: 9 skills in 3 stages, with free guides for each.">
+<meta property="og:title" content="SAP BTP CAP Roadmap · clickERP">
+<meta property="og:description" content="Free SAP CAP videos, guides and live demos. No coding background needed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FCFDFE;--navy:#12325B;--teal:#0D9488;--amber:#92400E;--amber-bg:#FEF3C7;--code:#0F1E36;--mint:#5EEAD4;--line:#E3E8F0;--muted:#4A5B75}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--navy);font-family:Lato,system-ui,sans-serif;line-height:1.55;font-size:17px}
+a{color:var(--teal)}
+.wrap{max-width:720px;margin:0 auto;padding:0 18px}
+header{position:sticky;top:0;z-index:5;background:rgba(252,253,254,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:900;font-size:20px;color:var(--navy);text-decoration:none}
+.logo span{display:grid;place-items:center;width:32px;height:32px;border-radius:8px;background:var(--navy);color:var(--mint);font-size:15px}
+nav{display:flex;gap:18px;overflow-x:auto;white-space:nowrap;padding-bottom:10px;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{font-weight:700;font-size:14px;text-decoration:none;color:var(--navy)}
+section{scroll-margin-top:100px}
+.soc{display:flex;gap:10px;align-items:center}.soc a{display:block;width:28px;height:28px}.soc svg{width:28px;height:28px;display:block}
+
+.hero{background:var(--navy);color:#fff;padding:44px 0 40px}
+.eyebrow{font-size:13px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--mint)}
+h1{font-size:34px;line-height:1.15;font-weight:900;margin:10px 0 14px}
+h1 em{font-style:normal;color:var(--mint)}
+.hero p{color:#D6E0EE;max-width:560px}
+.btns{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+@media(min-width:560px){.btns{flex-direction:row}}
+.btn{display:block;text-align:center;padding:15px 22px;border-radius:12px;font-weight:900;text-decoration:none;font-size:16px}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-light{background:#fff;color:var(--navy)}
+.btn-outline{border:2px solid var(--teal);color:var(--teal);background:#fff}
+section{padding:40px 0;border-bottom:1px solid var(--line)}
+h2{font-size:26px;font-weight:900;line-height:1.2;margin:6px 0 10px}
+.sec-eyebrow{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.lead{color:var(--muted);margin-bottom:20px}
+.demo{background:var(--amber-bg);border:1px solid #F5D98B;border-radius:16px;padding:22px}
+.demo .badge{display:inline-block;background:var(--amber);color:#fff;font-weight:900;font-size:12px;letter-spacing:.08em;padding:4px 10px;border-radius:999px}
+.dates{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}
+.date{background:#fff;border-radius:12px;padding:12px;text-align:center;border:1px solid #F5D98B}
+.date b{display:block;font-size:24px;font-weight:900}
+.date small{color:var(--amber);font-weight:700}
+.demo ul{margin:6px 0 18px 20px;color:var(--navy)}
+.list{display:flex;flex-direction:column;gap:10px}
+.card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:var(--navy)}
+.num{flex:none;display:grid;place-items:center;width:42px;height:42px;border-radius:10px;background:var(--navy);color:var(--mint);font-weight:900;font-size:15px}
+#who .num{background:#CCFBF1;font-size:20px}
+.carousel{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.carousel::-webkit-scrollbar{display:none}
+.carousel .card{flex:0 0 100%;scroll-snap-align:start;min-height:96px;align-items:center}
+.car-nav{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:14px}
+.car-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--navy);font-size:22px;line-height:1;cursor:pointer}
+.dots{display:flex;gap:8px}
+.dots button{width:8px;height:8px;border-radius:999px;border:0;padding:0;background:#C9D3E1;cursor:pointer;transition:width .2s}
+.dots button.on{width:22px;background:var(--teal)}
+.card h3{font-size:17px;font-weight:900;line-height:1.3}
+.card p{font-size:15px;color:var(--muted)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;margin-top:4px}
+.tag-live{background:#CCFBF1;color:#0F766E}
+.tag-soon{background:#EEF2F7;color:var(--muted)}
+.course{background:var(--code);color:#fff;border-radius:16px;padding:22px}
+.course code{font-family:"JetBrains Mono",monospace;color:var(--mint);font-size:14px}
+.course ul{margin:12px 0 0 20px;color:#D6E0EE;font-size:15px}
+.cta{background:var(--navy);color:#fff;text-align:center;padding:44px 0;border:0}
+.cta h2{color:#fff}
+.cta p{color:#D6E0EE;margin-bottom:20px}
+footer{padding:24px 0 32px;font-size:14px;color:var(--muted);text-align:center}
+.social{display:flex;justify-content:center;gap:18px;margin-bottom:10px;font-weight:700}
+
+.progress{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:22px;color:var(--navy)}
+.progress .bar{height:10px;background:#E3E8F0;border-radius:999px;overflow:hidden;margin-top:8px}
+.progress .fill{height:100%;width:0;background:var(--teal);transition:width .3s}
+.stages{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
+.stages a{display:block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:10px;color:#fff;text-decoration:none;font-size:13px;line-height:1.3}
+.stages b{display:block;color:var(--mint);font-size:15px}
+.skill{align-items:flex-start}
+.skn{font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+.tick{flex:none;position:relative;width:30px;height:30px;margin-top:2px;cursor:pointer}
+.tick input{position:absolute;opacity:0;width:30px;height:30px;margin:0;cursor:pointer}
+.tick span{display:block;width:30px;height:30px;border:2px solid #B8C4D6;border-radius:8px;background:#fff}
+.tick input:checked+span{background:var(--teal);border-color:var(--teal)}
+.tick input:checked+span::after{content:"";position:absolute;left:10px;top:5px;width:8px;height:15px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg)}
+.tick input:focus-visible+span{outline:3px solid var(--mint)}
+.skill.done{background:#F0FDFA;border-color:#99F6E4}
+.resources{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.res{display:inline-block;font-size:13px;font-weight:700;padding:4px 10px;border-radius:999px;background:#CCFBF1;color:#0F766E;text-decoration:none}
+.res.soon{background:#EEF2F7;color:var(--muted);font-weight:400}
+.check{font-size:14px;background:var(--amber-bg);color:var(--amber);border-radius:10px;padding:8px 10px;margin-top:4px}
+.check b{color:var(--amber)}
+.check code{font-family:"JetBrains Mono",monospace;font-size:13px}
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <a class="logo" href="index.html"><span>cE</span>clickERP</a>
+  <div class="soc"><a href="https://www.youtube.com/@clickERP" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4" fill="#FF0000"/><path d="M10 9l5 3-5 3z" fill="#fff"/></svg></a><a href="https://www.linkedin.com/company/clickerp26/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="4" fill="#0A66C2"/><rect x="6" y="10" width="2.6" height="8" fill="#fff"/><circle cx="7.3" cy="6.9" r="1.5" fill="#fff"/><path d="M11 10h2.5v1.2c.5-.8 1.4-1.4 2.7-1.4 2 0 2.8 1.3 2.8 3.4V18h-2.6v-4.3c0-1-.3-1.7-1.3-1.7s-1.5.7-1.5 1.7V18H11z" fill="#fff"/></svg></a><a href="https://www.instagram.com/clickerp_/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#F58529"/><stop offset=".5" stop-color="#DD2A7B"/><stop offset="1" stop-color="#515BD4"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="6" fill="url(#ig)"/><rect x="6" y="6" width="12" height="12" rx="4" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="2.8" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="16.4" cy="7.6" r="1" fill="#fff"/></svg></a></div>
+</div>
+<nav class="wrap"><a href="index.html">Home</a><a href="#stage1">Stage 1</a><a href="#stage2">Stage 2</a><a href="#stage3">Stage 3</a><a href="index.html#guides">Guides</a><a href="index.html#contact">Contact us</a></nav>
+</header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">Roadmap · SAP BTP CAP</div>
+  <h1>From zero to job-ready<br><em>in 4 to 6 weeks.</em></h1>
+  <p>9 skills in 3 stages, in the order you should learn them. Each one links to our free guides. Tick off each skill as you finish it.</p>
+  <div class="stages">
+    <a href="#stage1"><b>Stage 1</b>The base<br>Weeks 1–2</a>
+    <a href="#stage2"><b>Stage 2</b>A real app<br>Weeks 2–4</a>
+    <a href="#stage3"><b>Stage 3</b>Job-ready<br>Weeks 4–6</a>
+  </div>
+  <div class="progress"><b id="prog-text">0 of 9 skills done</b><div class="bar"><div class="fill" id="prog-fill"></div></div></div>
+</div></div>
+
+<main class="wrap">
+<section id="stage1"><div class="sec-eyebrow">Stage 1 · Weeks 1–2</div><h2>The base</h2><p class="lead">Understand why CAP exists, set up your free tools, and describe business data.</p><div class="list"><div class="card skill" data-key="sk1"><label class="tick"><input type="checkbox" data-key="sk1" aria-label="Mark SAP basics and clean core as done"><span></span></label><div><div class="skn">Skill 1</div><h3>SAP basics and clean core</h3><p>What ERP, SAP, S/4HANA and clean core mean, and why companies now build apps outside the ERP.</p><div class="resources"><a class="res" href="index.html#concept">Concept of the day</a><a class="res" href="https://www.youtube.com/@clickERP">Short videos on YouTube</a></div><p class="check"><b>You're ready when:</b> You can explain clean core to a friend in two sentences.</p></div></div><div class="card skill" data-key="sk2"><label class="tick"><input type="checkbox" data-key="sk2" aria-label="Mark SAP BTP and Business Application Studio as done"><span></span></label><div><div class="skn">Skill 2</div><h3>SAP BTP and Business Application Studio</h3><p>Create your free BTP trial, open BAS, and run your first CAP command.</p><div class="resources"><a class="res" href="guides/00-btp-trial-setup.html">Guide 0: BTP trial setup</a></div><p class="check"><b>You're ready when:</b> <code>cds --version</code> works in your own dev space.</p></div></div><div class="card skill" data-key="sk3"><label class="tick"><input type="checkbox" data-key="sk3" aria-label="Mark CDS data modeling as done"><span></span></label><div><div class="skn">Skill 3</div><h3>CDS data modeling</h3><p>Entities, keys, types, aspects like cuid and managed, and associations between entities.</p><div class="resources"><a class="res" href="guides/01-first-sales-order.html">Guide 1: First CAP app (steps 1–4)</a></div><p class="check"><b>You're ready when:</b> You can model Customers and Orders, linked to each other, and load sample data from CSV.</p></div></div></div></section><section id="stage2"><div class="sec-eyebrow">Stage 2 · Weeks 2–4</div><h2>A real app</h2><p class="lead">Turn your data model into an API, real screens and real business rules.</p><div class="list"><div class="card skill" data-key="sk4"><label class="tick"><input type="checkbox" data-key="sk4" aria-label="Mark Services and OData as done"><span></span></label><div><div class="skn">Skill 4</div><h3>Services and OData</h3><p>Projections, the OData API, $expand and $select, and testing with test.http.</p><div class="resources"><a class="res" href="guides/01-first-sales-order.html">Guide 1: steps 5–6</a><a class="res" href="guides/02-customer-notes-s4hana.html">Guide 2: Customer Notes</a></div><p class="check"><b>You're ready when:</b> You can read a customer with all their orders in one request.</p></div></div><div class="card skill" data-key="sk5"><label class="tick"><input type="checkbox" data-key="sk5" aria-label="Mark Fiori elements as done"><span></span></label><div><div class="skn">Skill 5</div><h3>Fiori elements</h3><p>List Report and Object Page screens, drawn from annotations, with no UI code.</p><div class="resources"><a class="res" href="guides/01-first-sales-order.html">Guide 1: steps 7–8</a><a class="res" href="guides/03-book-lending-actions-functions.html">Guide 3: Fiori buttons</a><a class="res" href="interview/fiori-actions-dialogs-tree-tables.html">Interview: Fiori actions and dialogs</a></div><p class="check"><b>You're ready when:</b> You can generate a Fiori app and choose its columns and page title.</p></div></div><div class="card skill" data-key="sk6"><label class="tick"><input type="checkbox" data-key="sk6" aria-label="Mark Business logic as done"><span></span></label><div><div class="skn">Skill 6</div><h3>Business logic</h3><p>Handlers in JavaScript, your own actions and functions, and errors that refuse bad requests.</p><div class="resources"><a class="res" href="guides/03-book-lending-actions-functions.html">Guide 3: Actions and functions</a><span class="res soon">Guide 4: Webinar Registration (event handlers) · coming soon</span></div><p class="check"><b>You're ready when:</b> You can add a "borrow" action that says no when nothing is left.</p></div></div></div></section><section id="stage3"><div class="sec-eyebrow">Stage 3 · Weeks 4–6</div><h2>Job-ready</h2><p class="lead">Secure your app, deploy it, connect it to S/4HANA, and add AI.</p><div class="list"><div class="card skill" data-key="sk7"><label class="tick"><input type="checkbox" data-key="sk7" aria-label="Mark Security and deployment as done"><span></span></label><div><div class="skn">Skill 7</div><h3>Security and deployment</h3><p>Users, roles and login, then deploying to Cloud Foundry with services like HANA Cloud.</p><div class="resources"><a class="res" href="interview/btp-cockpit-instances-bindings-service-keys.html">Interview: instances, bindings and service keys</a><span class="res soon">Guide 6: Expense Claims (authorization) · coming soon</span></div><p class="check"><b>You're ready when:</b> Only the right role can approve, and your app runs on BTP, not just in BAS.</p></div></div><div class="card skill" data-key="sk8"><label class="tick"><input type="checkbox" data-key="sk8" aria-label="Mark Integration with S/4HANA as done"><span></span></label><div><div class="skn">Skill 8</div><h3>Integration with S/4HANA</h3><p>Import an SAP API, test with mock data, then call the real SAP sandbox.</p><div class="resources"><a class="res" href="guides/02-customer-notes-s4hana.html">Guide 2: Customer Notes (S/4HANA)</a></div><p class="check"><b>You're ready when:</b> Your app shows S/4HANA customers without copying them.</p></div></div><div class="card skill" data-key="sk9"><label class="tick"><input type="checkbox" data-key="sk9" aria-label="Mark AI on SAP BTP as done"><span></span></label><div><div class="skn">Skill 9</div><h3>AI on SAP BTP</h3><p>The building blocks: AI Core, the generative AI hub, the HANA vector engine and Joule.</p><div class="resources"><span class="res soon">AI on BTP guide · coming soon</span></div><p class="check"><b>You're ready when:</b> You can explain how a CAP app could answer questions from company documents.</p></div></div></div></section>
+
+<section class="cta" id="contact">
+  <h2>Want to go faster?</h2>
+  <p>Learn this roadmap live with an instructor, with real projects and your questions answered.</p>
+  <a class="btn btn-teal" style="display:inline-block" href="https://forms.gle/ovT9EgQquL5ERW2c6" target="_blank" rel="noopener">Request live training</a>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="social">
+    <a href="https://www.youtube.com/@clickERP" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.linkedin.com/company/clickerp26/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://www.instagram.com/clickerp_/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+  © 2026 clickERP
+</footer>
+
+<script>
+(function () {
+  var KEY = "clickerp-roadmap";
+  var done = {};
+  try { done = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) {}
+  var boxes = document.querySelectorAll(".tick input");
+  function update() {
+    var count = 0;
+    boxes.forEach(function (b) {
+      b.closest(".skill").classList.toggle("done", b.checked);
+      if (b.checked) count++;
+    });
+    document.getElementById("prog-text").textContent = count + " of " + boxes.length + " skills done" + (count === boxes.length ? " 🎉 You're job-ready!" : "");
+    document.getElementById("prog-fill").style.width = (count / boxes.length * 100) + "%";
+  }
+  boxes.forEach(function (b) {
+    b.checked = !!done[b.dataset.key];
+    b.addEventListener("change", function () {
+      done[b.dataset.key] = b.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(done)); } catch (e) {}
+      update();
+    });
+  });
+  update();
+})();
+</script>
+</body>
+</html>
